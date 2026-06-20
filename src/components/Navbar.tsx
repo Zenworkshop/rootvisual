@@ -18,7 +18,7 @@ export default function Navbar() {
         <div className="flex items-center space-x-6">
           <div className="flex items-center space-x-2">
             <MdAccessTime />
-            <span>Setiap Hari : 08:00 - 17:00</span>
+            <span>Setiap Hari : 08:00 - 17:00asdasdadas</span>
           </div>
           <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 hover:text-gray-300 transition">
             <FiPhone />

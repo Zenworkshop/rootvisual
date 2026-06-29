@@ -4,7 +4,7 @@ import CountUp from 'react-countup';
 import { Users, LayoutGrid, ThumbsUp } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 
-import pengalamanImg from "../assets/HILTI/ca8.png";
+import pengalamanImg from "../assets/welcome.jpg"; // Ganti dengan path gambar yang sesuai
 
 export default function Welcome() {
   const stats = [
@@ -43,99 +43,187 @@ export default function Welcome() {
   };
 
   return (
-    <section className="py-16 px-4 md:px-8 max-w-6xl mx-auto">
-      <div className="flex flex-col md:flex-row items-center">
-        {/* Left - Image & Badge */}
-        <motion.div
-          className="w-full md:w-1/2 relative mb-12 md:mb-0"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          variants={fadeIn}
-        >
-          <motion.div
-            className="relative rounded-full overflow-hidden w-64 h-64 md:w-80 md:h-80 mx-auto"
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.3 }}
-          >
-            <img
-              src={pengalamanImg}
-              alt="Foto pengalaman Zen Kitchen Set"
-              className="w-full h-full object-cover"
-            />
-          </motion.div>
+  <section className="relative overflow-hidden py-20">
+    {/* Background Blur */}
+    <div className="absolute inset-0 -z-10">
+      <div className="absolute left-0 top-32 h-72 w-72 rounded-full bg-violet-300/30 blur-3xl"></div>
+      <div className="absolute right-0 bottom-10 h-72 w-72 rounded-full bg-cyan-300/30 blur-3xl"></div>
+      <div className="absolute left-1/2 bottom-0 h-72 w-72 -translate-x-1/2 rounded-full bg-pink-300/30 blur-3xl"></div>
+    </div>
 
-          <motion.div
-            className="absolute bottom-0 right-4 md:right-12 bg-[#ba1322] text-white p-4 rounded-lg shadow-md"
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{
-              delay: 0.5,
-              type: "spring",
-              stiffness: 200,
-              damping: 15
-            }}
-          >
-            <div className="text-4xl font-bold">15<sup>+</sup></div>
-            <div className="text-sm md:text-base">Tahun Pengalaman</div>
-          </motion.div>
-        </motion.div>
+    <div className="max-w-7xl mx-auto px-4 md:px-8 grid lg:grid-cols-2 gap-16 items-center">
 
-        {/* Right - Content */}
-        <div className="w-full md:w-1/2 md:pl-12">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
-            variants={staggerContainer}
-          >
-            <motion.div variants={fadeIn} className="text-orange-400 mb-1">SELAMAT DATANG DI</motion.div>
-            <motion.h2
-              variants={fadeIn}
-              className="text-3xl md:text-4xl font-bold mb-6"
-            >
-              Aplikator Hilti
-            </motion.h2>
-
-            <motion.p
-              variants={fadeIn}
-              className="text-gray-600 mb-8"
-            >
-              Aplikator Hilti adalah aplikator resmi Hilti terpercaya yang berpengalaman lebih dari 10 tahun dalam jasa coring beton dan pemasangan anchor untuk kebutuhan konstruksi. Kami menggunakan <strong>alat dan teknologi Hilti terbaru untuk memastikan hasil kerja yang presisi, kuat, dan sesuai standar keselamatan proyek. </strong> Cocok untuk proyek gedung, infrastruktur, maupun renovasi teknik sipil.
-            </motion.p>
-
-            <a
-              href="https://wa.me/6281234567890" // Ganti dengan nomor WA kamu
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-2xl shadow-md transition"
-            >
-              <FaWhatsapp size={20} />
-              Konsultasikan Sekarang
-            </a>
-          </motion.div>
-        </div>
-      </div>
-
-      {/* Statistik */}
+      {/* LEFT */}
       <motion.div
-        className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center mt-16"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ once: true }}
         variants={staggerContainer}
       >
-        {stats.map((stat, index) => (
-          <motion.div key={index} variants={fadeIn}>
-            <div className="flex justify-center mb-2">{stat.icon}</div>
-            <h2 className="text-4xl font-bold text-blue-600">
-              <CountUp end={stat.value} duration={2.5} />+
-            </h2>
-            <p className="mt-2 text-gray-700">{stat.label}</p>
-          </motion.div>
-        ))}
+        <motion.div
+          variants={fadeIn}
+          className="inline-flex rounded-full border bg-white px-5 py-2 text-sm shadow"
+        >
+          📸 Studio Foto Profesional sejak 2003
+        </motion.div>
+
+        <motion.h1
+          variants={fadeIn}
+          className="text-5xl lg:text-6xl font-black leading-tight mt-6"
+        >
+          Abadikan Momen,
+          <br />
+          Hidupkan Kenangan.
+        </motion.h1>
+
+        <motion.p
+          variants={fadeIn}
+          className="text-gray-600 mt-6 text-lg leading-relaxed"
+        >
+          Studio foto profesional untuk{" "}
+          <strong>
+            wisuda, keluarga, couple, wedding, foto grup, pas foto,
+            personal branding, corporate portrait hingga company profile.
+          </strong>
+        </motion.p>
+
+        {/* Chips */}
+        <motion.div
+          variants={fadeIn}
+          className="flex flex-wrap gap-3 mt-6"
+        >
+          {[
+            "Foto Wisuda",
+            "Foto Keluarga",
+            "Wedding",
+            "Pas Foto",
+            "Corporate",
+            "Personal Branding",
+          ].map((item) => (
+            <span
+              key={item}
+              className="rounded-full border bg-white px-4 py-2 text-sm shadow-sm"
+            >
+              {item}
+            </span>
+          ))}
+        </motion.div>
+
+        {/* Button */}
+        <motion.div
+          variants={fadeIn}
+          className="flex gap-4 mt-8 flex-wrap"
+        >
+          <a
+            href="https://wa.me/6281234567890"
+            className="bg-black text-white rounded-2xl px-7 py-4 flex items-center gap-2 font-semibold hover:bg-gray-800"
+          >
+            <FaWhatsapp />
+            Konsultasikan
+          </a>
+
+          <a
+            href="#portfolio"
+            className="bg-white rounded-2xl px-7 py-4 shadow font-semibold hover:bg-gray-50"
+          >
+            Lihat Portfolio
+          </a>
+        </motion.div>
       </motion.div>
-    </section>
-  );
+
+      {/* RIGHT */}
+      <motion.div
+        variants={fadeIn}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
+        <div className="bg-white rounded-[40px] p-5 shadow-2xl">
+
+          <div className="relative">
+
+            <img
+              src={pengalamanImg}
+              alt="Studio Root Visual"
+              className="w-full h-[520px] object-cover rounded-[30px]"
+            />
+
+            {/* Floating Card */}
+            <div className="absolute bottom-5 left-5 bg-white rounded-2xl px-5 py-4 shadow-lg">
+              <p className="text-gray-500 text-sm">
+                Root Visual Studio
+              </p>
+              <h3 className="font-bold">
+                We Capture Your Best Moment
+              </h3>
+            </div>
+
+          </div>
+
+          {/* Feature */}
+          <div className="grid grid-cols-3 gap-4 mt-5">
+
+            <div className="bg-gray-50 rounded-2xl p-4">
+              <p className="text-sm text-gray-500">
+                Lighting
+              </p>
+              <h4 className="font-semibold">
+                Profesional
+              </h4>
+            </div>
+
+            <div className="bg-gray-50 rounded-2xl p-4">
+              <p className="text-sm text-gray-500">
+                Studio
+              </p>
+              <h4 className="font-semibold">
+                Nyaman & Bersih
+              </h4>
+            </div>
+
+            <div className="bg-gray-50 rounded-2xl p-4">
+              <p className="text-sm text-gray-500">
+                Output
+              </p>
+              <h4 className="font-semibold">
+                Digital / Print
+              </h4>
+            </div>
+
+          </div>
+        </div>
+      </motion.div>
+
+    </div>
+
+    {/* Statistik */}
+    <motion.div
+      className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-24 max-w-6xl mx-auto px-4"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      variants={staggerContainer}
+    >
+      {stats.map((stat, index) => (
+        <motion.div
+          key={index}
+          variants={fadeIn}
+          className="bg-white rounded-3xl shadow-lg p-8 text-center"
+        >
+          <div className="flex justify-center mb-3">
+            {stat.icon}
+          </div>
+
+          <h2 className="text-5xl font-bold text-blue-600">
+            <CountUp end={stat.value} duration={2} />+
+          </h2>
+
+          <p className="mt-2 text-gray-600">
+            {stat.label}
+          </p>
+        </motion.div>
+      ))}
+    </motion.div>
+  </section>
+);
 }

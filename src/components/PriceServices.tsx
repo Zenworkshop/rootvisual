@@ -6,117 +6,202 @@ import { FaWhatsapp } from "react-icons/fa";
 
 const layanan = [
   {
-    title: "Jasa Pemasangan Chemical Rebar",
+    plan: "Starter",
+    title: "Chemical Rebar",
+    desc: "Pemasangan rebar chemical untuk sambungan tulangan beton yang kuat dan aman.",
     price: "30.000",
-    prefix: "Mulai Dari",
-    currency: "Rp",
+    badge: false,
+    button: "Pilih Layanan",
     points: [
       "Konsultasi Gratis",
-      "Tersedia Berbagai Diameter Anchor",
-      "Tersedia Berbagai Merek Chemical",
       "Material Berkualitas",
-      "Pekerja Profesional Dan Bersertifikat",
-      "Peralatan Canggih Dan Baru",
+      "Teknisi Bersertifikat",
       "Proses Cepat",
-      "Harga Fleksible",
     ],
   },
   {
-    title: "Jasa Pemasangan Chemical Anchor",
+    plan: "Pro",
+    title: "Chemical Anchor",
+    desc: "Layanan pemasangan chemical anchor HILTI dengan standar pekerjaan profesional.",
     price: "30.000",
-    prefix: "Mulai Dari",
-    currency: "Rp",
+    badge: true,
+    button: "Pilih Layanan",
     points: [
       "Konsultasi Gratis",
-      "Tersedia Berbagai Diameter Anchor",
-      "Tersedia Berbagai Merek Chemical",
-      "Material Berkualitas",
-      "Pekerja Profesional Dan Bersertifikat",
-      "Peralatan Canggih Dan Baru",
-      "Proses Cepat",
-      "Harga Fleksible",
+      "Semua Diameter Anchor",
+      "Chemical Berkualitas",
+      "Pekerjaan Presisi",
     ],
   },
   {
-    title: "Jasa Tes Tarik / Pull Out Test",
+    plan: "Premium",
+    title: "Pull Out Test",
+    desc: "Pengujian kekuatan anchor sesuai standar teknik sipil dan laporan hasil lengkap.",
     price: "100.000",
-    prefix: "Mulai Dari",
-    currency: "Rp",
+    badge: false,
+    button: "Pilih Layanan",
     points: [
-      "Konsultasi Gratis",
-      "Tersedia Berbagai Diameter Anchor",
-      "Tersedia Berbagai Merek Chemical",
-      "Material Berkualitas",
-      "Pekerja Profesional Dan Bersertifikat",
-      "Peralatan Canggih Dan Baru",
-      "Proses Cepat",
-      "Harga Fleksible",
+      "Laporan Pengujian",
+      "Alat Terkalibrasi",
+      "Operator Berpengalaman",
+      "Standar Teknik",
     ],
   },
 ];
 
 export default function LayananGrid() {
   return (
-    <section className="bg-[#ba1322] py-20 px-4 md:px-8 min-h-screen flex flex-col items-center justify-center">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
-        {layanan.map((item, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            whileHover={{ scale: 1.05 }}
-            transition={{ delay: index * 0.15, type: "spring", stiffness: 300 }}
-            className="
-              flex flex-col bg-white/10 rounded-lg shadow-lg overflow-hidden
-              hover:shadow-xl transition-shadow duration-300
-              border border-[#8f0f1b] cursor-pointer
-            "
-          >
-            <div
-              className="
-                px-6 py-4 text-center text-lg font-semibold border-b border-[#8f0f1b]
-                text-white bg-[#8f0f1b] rounded-t-lg
-              "
+    <section className="bg-gray-100 py-16 px-4 md:px-8">
+
+      <div className="max-w-7xl mx-auto">
+
+        {/* Heading */}
+    <motion.div
+      initial={{ opacity: 0, y: -20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+      className="text-center mb-12"
+    >
+     
+
+      <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mt-5">
+        Pilih Paket Foto
+      </h2>
+
+      <p className="max-w-3xl mx-auto text-gray-600 text-lg leading-8 mt-5">
+        Root Visual menyediakan berbagai <strong>paket studio foto profesional</strong> mulai dari
+        <strong> pas foto</strong>, <strong>foto wisuda</strong>, <strong>foto keluarga</strong>,
+        <strong> couple</strong>, <strong>prewedding</strong>, hingga
+        <strong> wedding</strong> dengan harga terjangkau, hasil berkualitas tinggi,
+        dan layanan fotografer profesional.
+      </p>
+    </motion.div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+          {layanan.map((item, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ y: -6 }}
+              transition={{
+                duration: 0.4,
+                delay: index * 0.15,
+              }}
+              className={`
+                relative
+                bg-white
+                rounded-[28px]
+                border
+                ${
+                  item.badge
+                    ? "border-indigo-300"
+                    : "border-gray-200"
+                }
+                shadow-xl
+                p-8
+                flex
+                flex-col
+              `}
             >
-              {item.title}
-            </div>
 
-            <div className="py-6 text-center border-b border-[#8f0f1b]">
-              <p className="text-white text-sm font-semibold mb-2">{item.prefix}</p>
-              <div className="flex items-baseline justify-center">
-                <span className="text-white text-xl font-semibold mr-1">{item.currency}</span>
-                <span className="text-white text-5xl font-bold">{item.price}</span>
+              {item.badge && (
+                <div className="absolute -top-4 right-8 bg-indigo-100 border border-indigo-300 rounded-full px-5 py-1.5 text-sm font-semibold">
+                  Best Seller
+                </div>
+              )}
+
+              <p className="text-gray-500 font-semibold text-lg">
+                {item.plan}
+              </p>
+
+              <h3 className="text-3xl font-bold mt-2 text-gray-900 leading-tight">
+                {item.title}
+              </h3>
+
+              <p className="text-gray-500 text-base leading-7 mt-3">
+                {item.desc}
+              </p>
+
+              <div className="mt-6">
+
+                <p className="text-gray-500 text-base">
+                  Mulai dari
+                </p>
+
+                <div className="flex items-end mt-1">
+
+                  <span className="text-xl font-semibold">
+                    Rp
+                  </span>
+
+                  <span className="text-5xl font-black ml-2 text-gray-900">
+                    {item.price}
+                  </span>
+
+                </div>
+
               </div>
-            </div>
 
-            <div className="p-6 pt-4 flex-grow">
-              <ul className="text-white text-sm list-disc list-inside space-y-2">
+              <ul className="space-y-3 mt-8 flex-grow">
+
                 {item.points.map((point, i) => (
-                  <li key={i}>{point}</li>
+                  <li
+                    key={i}
+                    className="flex items-center gap-3 text-base text-gray-600"
+                  >
+                    <span className="text-gray-500">
+                      ✓
+                    </span>
+
+                    {point}
+                  </li>
                 ))}
+
               </ul>
-            </div>
-          </motion.div>
-        ))}
+
+              <a
+                href="https://wa.me/6281234567890"
+                className={`
+                  mt-8
+                  w-full
+                  rounded-2xl
+                  py-4
+                  text-center
+                  text-lg
+                  font-semibold
+                  transition
+                  ${
+                    item.badge
+                      ? "bg-indigo-600 hover:bg-indigo-700 text-white"
+                      : "bg-slate-900 hover:bg-slate-800 text-white"
+                  }
+                `}
+              >
+                {item.button}
+              </a>
+
+            </motion.div>
+          ))}
+
+        </div>
+
+        <div className="text-center mt-12">
+
+          <a
+            href="https://wa.me/6281234567890"
+            className="inline-flex items-center gap-3 bg-[#ba1322] hover:bg-[#97101c] text-white rounded-full px-8 py-4 font-semibold transition"
+          >
+            <FaWhatsapp />
+            Konsultasi Gratis
+          </a>
+
+        </div>
+
       </div>
 
-      <div className="mt-16 text-center">
-        <a
-          href="https://wa.me/6281234567890?text=Halo%20saya%20ingin%20tanya%20tentang%20layanan%20aplikator%20Hilti"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="
-            inline-flex items-center gap-3
-            bg-white text-[#ba1322] px-8 py-4 rounded-full
-            text-lg font-semibold border border-white
-            hover:bg-[#e64a4a] hover:text-white
-            transition shadow-lg cursor-pointer
-          "
-        >
-          <FaWhatsapp size={24} />
-          Konsultasi Gratis
-        </a>
-      </div>
     </section>
   );
 }

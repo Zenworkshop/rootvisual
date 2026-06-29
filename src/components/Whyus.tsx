@@ -3,44 +3,44 @@ import { CheckCircle } from "lucide-react";
 
 const features = [
   {
-    title: "Solusi Fixing yang Kuat & Tahan Lama",
-    desc: "Kami menggunakan sistem sambungan dan pemasangan dari HILTI yang terbukti kokoh, presisi, dan memiliki daya tahan tinggi di berbagai kondisi konstruksi."
+    title: "Fotografer Profesional & Berpengalaman",
+    desc: "Tim fotografer kami berpengalaman menangani foto wisuda, keluarga, wedding, couple, personal branding, hingga corporate portrait dengan arahan pose yang natural."
   },
   {
-    title: "Tim Aplikator Bersertifikat",
-    desc: "Seluruh teknisi kami telah mengikuti pelatihan resmi dari HILTI, menjamin hasil kerja sesuai standar global dalam keamanan dan performa."
+    title: "Studio Foto Nyaman dengan Lighting Profesional",
+    desc: "Menggunakan lighting studio berkualitas tinggi sehingga hasil foto lebih tajam, cerah, dan memiliki warna yang natural tanpa pencahayaan berlebihan."
   },
   {
-    title: "Support Engineering Langsung",
-    desc: "Kami didukung oleh tim engineer HILTI untuk memastikan perencanaan dan eksekusi teknis di lapangan sesuai spesifikasi terbaik."
+    title: "Hasil Foto Berkualitas Tinggi",
+    desc: "Setiap foto melalui proses editing profesional untuk menghasilkan warna, detail, dan pencahayaan yang lebih maksimal tanpa menghilangkan kesan alami."
   },
   {
-    title: "Efisiensi Waktu & Biaya Proyek",
-    desc: "Dengan sistem HILTI yang praktis dan cepat dalam pemasangan, kami membantu menghemat waktu kerja serta meminimalkan pemborosan material."
+    title: "Pilihan Paket Foto Lengkap",
+    desc: "Tersedia paket foto wisuda, keluarga, couple, prewedding, wedding, pas foto, personal branding, corporate portrait, hingga company profile sesuai kebutuhan Anda."
   },
   {
-    title: "Layanan Site Visit Gratis",
-    desc: "Kami siap melakukan kunjungan ke lokasi proyek tanpa biaya untuk mengevaluasi kebutuhan teknis sebelum proses pemasangan dimulai."
+    title: "Arahan Pose yang Mudah & Natural",
+    desc: "Tidak perlu khawatir jika belum pernah foto studio. Fotografer kami akan membantu mengarahkan pose sehingga hasil foto terlihat lebih percaya diri dan elegan."
   },
   {
-    title: "Aman untuk Struktur Bangunan",
-    desc: "Teknologi HILTI mengutamakan keamanan dan tidak merusak struktur asli bangunan, cocok untuk proyek retrofit maupun bangunan baru."
+    title: "File Digital & Cetak Premium",
+    desc: "Selain file digital resolusi tinggi, kami juga menyediakan layanan cetak foto premium dan frame eksklusif yang siap dipajang atau dijadikan hadiah."
   },
   {
-    title: "Didukung Produk Original HILTI",
-    desc: "Kami hanya menggunakan produk asli HILTI mulai dari anchor, fastener, hingga sistem pemotongan dan pengeboran."
+    title: "Booking Mudah & Jadwal Fleksibel",
+    desc: "Reservasi dapat dilakukan melalui WhatsApp dengan pilihan jadwal yang fleksibel sehingga lebih mudah menyesuaikan waktu Anda."
   },
   {
-    title: "Pelayanan Profesional & Tepat Waktu",
-    desc: "Setiap pekerjaan dilakukan dengan jadwal yang jelas, koordinasi yang rapi, dan komunikasi yang profesional."
+    title: "Harga Terjangkau & Transparan",
+    desc: "Seluruh paket studio foto memiliki harga yang jelas tanpa biaya tersembunyi, sehingga Anda bisa memilih paket sesuai kebutuhan dan anggaran."
   },
   {
-    title: "Laporan & Dokumentasi Lengkap",
-    desc: "Setiap proyek disertai dengan dokumentasi teknis, foto progress, dan laporan akhir untuk kejelasan pertanggungjawaban."
+    title: "Cocok untuk Berbagai Kebutuhan",
+    desc: "Mulai dari foto wisuda, keluarga, couple, pas foto, personal branding, corporate portrait, hingga dokumentasi bisnis dan company profile profesional."
   },
   {
-    title: "Garansi Kualitas Pekerjaan",
-    desc: "Kami memberikan garansi terhadap hasil pemasangan sesuai ketentuan teknis dari HILTI dan standar keselamatan proyek."
+    title: "Dipercaya Ratusan Klien",
+    desc: "Root Visual telah membantu ratusan pelanggan mengabadikan momen penting dengan pelayanan profesional dan hasil foto yang memuaskan."
   },
 ];
 
@@ -69,7 +69,7 @@ export default function WhyUs() {
             Keunggulan Kami
           </h3>
           <h2 className="text-4xl font-bold text-white mt-2">
-            Kenapa memilih kami sebagai aplikator HILTI?
+            Mengapa Root Visual?
           </h2>
         </motion.div>
 

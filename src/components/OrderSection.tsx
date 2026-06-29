@@ -5,31 +5,31 @@ import { FaWhatsapp } from "react-icons/fa";
 import hiltiImg from "../assets/sectionn.png"; // Ganti jika ada gambar HILTI yang lebih sesuai
 
 const steps = [
-  { 
-    id: "01", 
-    title: "Konsultasi Kebutuhan Proyek", 
-    desc: "Diskusikan jenis sambungan, area aplikasi, dan kebutuhan teknis struktur bangunan Anda bersama tim kami." 
+  {
+    id: "01",
+    title: "Hubungi & Pilih Paket Foto",
+    desc: "Konsultasikan kebutuhan Anda melalui WhatsApp, lalu pilih paket foto yang sesuai mulai dari wisuda, keluarga, wedding, personal branding, hingga corporate portrait.",
   },
-  { 
-    id: "02", 
-    title: "Survey Lapangan", 
-    desc: "Kami datang langsung ke lokasi proyek untuk analisis teknis dan mengevaluasi metode pemasangan terbaik." 
+  {
+    id: "02",
+    title: "Booking Jadwal Pemotretan",
+    desc: "Tentukan tanggal dan jam yang diinginkan. Tim Root Visual akan membantu memilih jadwal terbaik sesuai kebutuhan Anda.",
   },
-  { 
-    id: "03", 
-    title: "Rekomendasi Sistem & Estimasi", 
-    desc: "Kami menyusun metode fixing, memilih produk HILTI yang sesuai, dan menyampaikan estimasi biaya secara transparan.",
-    highlight: true 
+  {
+    id: "03",
+    title: "Sesi Foto Profesional",
+    desc: "Datang ke studio dan nikmati sesi foto bersama fotografer profesional dengan arahan pose, lighting studio, serta suasana yang nyaman.",
+    highlight: true,
   },
-  { 
-    id: "04", 
-    title: "Pemasangan Sesuai SOP", 
-    desc: "Tim aplikator bersertifikat kami akan melakukan pekerjaan dengan standar keselamatan dan kualitas HILTI." 
+  {
+    id: "04",
+    title: "Editing & Seleksi Foto",
+    desc: "Setiap foto diproses melalui tahap editing profesional agar warna, pencahayaan, dan detail terlihat lebih maksimal dengan tetap natural.",
   },
-  { 
-    id: "05", 
-    title: "Serah Terima & Dokumentasi", 
-    desc: "Proyek selesai disertai dokumentasi teknis dan foto, serta garansi hasil pekerjaan dari tim HILTI aplikator resmi." 
+  {
+    id: "05",
+    title: "File Digital & Cetak Foto",
+    desc: "Hasil foto dikirim dalam format digital berkualitas tinggi dan dapat dilanjutkan dengan layanan cetak foto maupun frame premium.",
   },
 ];
 
@@ -67,7 +67,7 @@ export default function OrderSection() {
             Layanan Aplikator
           </h3>
           <h2 className="text-4xl font-bold text-gray-800 mt-2">
-            Tahapan Layanan HILTI
+             Proses Booking Studio Foto Root Visual
           </h2>
         </motion.div>
 
@@ -83,9 +83,11 @@ export default function OrderSection() {
                 className="w-full h-auto object-cover" 
               />
             </div>
-            <p className="mt-4 text-gray-600 leading-relaxed text-center md:text-left">
-              Kami adalah <span className="font-semibold">aplikator resmi HILTI</span> yang siap membantu kebutuhan pemasangan sistem fixing untuk struktur baja, beton, maupun bata ringan.
-              Solusi presisi, aman, dan cepat untuk proyek bangunan Anda.
+            <p className="mt-5 text-gray-600 text-lg leading-7 text-center md:text-left">
+              Root Visual merupakan <span className="font-semibold">studio foto profesional</span>
+              yang melayani foto wisuda, keluarga, couple, prewedding, wedding, pas foto,
+              personal branding, corporate portrait, hingga company profile dengan fotografer
+              berpengalaman dan hasil foto berkualitas tinggi.
             </p>
 
             {/* Tombol Kontak WA */}

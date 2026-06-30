@@ -9,27 +9,27 @@ export default function FAQHilti() {
   const [faqIndex, setFaqIndex] = useState<number | null>(null);
 
   const faqs = [
-    {
-      question: "Apa peran utama aplikator Hilti di proyek konstruksi?",
-      answer:
-        "Aplikator Hilti bertugas menggunakan peralatan Hilti untuk instalasi, pengikatan, pemotongan, dan pengeboran sesuai standar teknis dan keamanan di lapangan.",
-    },
-    {
-      question: "Bagaimana cara memilih alat Hilti yang tepat?",
-      answer:
-        "Pilih alat berdasarkan jenis pekerjaan dan material yang akan dikerjakan, serta pastikan alat tersebut memiliki sertifikasi dan fitur keamanan lengkap.",
-    },
-    {
-      question: "Apa tips agar penggunaan alat lebih efisien dan aman?",
-      answer:
-        "Gunakan APD lengkap, lakukan perawatan rutin alat, ikuti SOP penggunaan, dan selalu cek kondisi alat sebelum dan sesudah digunakan.",
-    },
-    {
-      question: "Bagaimana aplikator Hilti mengatasi kendala teknis?",
-      answer:
-        "Aplikator dapat menghubungi support teknis Hilti, mengikuti pelatihan resmi, dan menggunakan manual produk untuk solusi dan troubleshooting cepat.",
-    },
-  ];
+  {
+    question: "Apakah harus booking sebelum datang?",
+    answer:
+      "Disarankan melakukan booking terlebih dahulu agar jadwal pemotretan sesuai dengan waktu yang Anda inginkan.",
+  },
+  {
+    question: "Apakah bisa foto keluarga dengan banyak anggota?",
+    answer:
+      "Bisa. Kami melayani foto keluarga kecil maupun keluarga besar dengan setting studio yang nyaman.",
+  },
+  {
+    question: "Berapa lama proses edit dan pengiriman foto?",
+    answer:
+      "Estimasi proses editing sekitar 3–7 hari kerja tergantung paket yang dipilih.",
+  },
+  {
+    question: "Apakah tersedia cetak foto dan frame?",
+    answer:
+      "Ya. Selain file digital, kami juga menyediakan layanan cetak foto premium dan berbagai pilihan frame.",
+  },
+];
 
   return (
     <section className="bg-white text-gray-900 py-16 px-4 md:px-6">

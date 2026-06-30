@@ -12,32 +12,38 @@ import proyek19 from "../assets/HILTI/cr1.png";
 const testimonials = [
   {
     name: "Andi Saputra",
-    review: "Aplikator Hilti sangat profesional dan hasil kerjanya presisi sekali!",
+    review:
+      "Hasil foto wisuda saya sangat memuaskan. Fotografernya ramah dan hasil editnya natural.",
     stars: 5,
   },
   {
     name: "Rina Wijaya",
-    review: "Layanan aplikator Hilti cepat dan ramah, saya puas sekali.",
-    stars: 4,
+    review:
+      "Studio nyaman, pencahayaan bagus, dan proses pemotretan keluarga berjalan santai.",
+    stars: 5,
   },
   {
     name: "Budi Santoso",
-    review: "Harga terjangkau dengan kualitas pengerjaan aplikator Hilti yang terbaik.",
+    review:
+      "Pas foto cepat jadi dan hasilnya jauh lebih bagus dibanding studio lain.",
     stars: 5,
   },
   {
     name: "Sari Melati",
-    review: "Aplikator Hilti recommended, pengerjaan rapi dan sesuai jadwal.",
+    review:
+      "Foto prewedding kami hasilnya elegan. Tim Root Visual sangat profesional.",
     stars: 5,
   },
   {
     name: "Joko Prasetyo",
-    review: "Tim aplikator Hilti sangat membantu dan komunikatif selama proses kerja.",
-    stars: 4,
+    review:
+      "Pelayanan sangat ramah, hasil corporate portrait sesuai ekspektasi perusahaan kami.",
+    stars: 5,
   },
   {
     name: "Dewi Anggraeni",
-    review: "Saya puas menggunakan jasa aplikator Hilti, hasilnya sangat memuaskan.",
+    review:
+      "Sangat puas foto keluarga di Root Visual. Anak-anak juga nyaman selama sesi foto.",
     stars: 5,
   },
 ];

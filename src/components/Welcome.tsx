@@ -87,27 +87,7 @@ export default function Welcome() {
           </strong>
         </motion.p>
 
-        {/* Chips */}
-        <motion.div
-          variants={fadeIn}
-          className="flex flex-wrap gap-3 mt-6"
-        >
-          {[
-            "Foto Wisuda",
-            "Foto Keluarga",
-            "Wedding",
-            "Pas Foto",
-            "Corporate",
-            "Personal Branding",
-          ].map((item) => (
-            <span
-              key={item}
-              className="rounded-full border bg-white px-4 py-2 text-sm shadow-sm"
-            >
-              {item}
-            </span>
-          ))}
-        </motion.div>
+        
 
         {/* Button */}
         <motion.div
@@ -148,49 +128,11 @@ export default function Welcome() {
               className="w-full h-[520px] object-cover rounded-[30px]"
             />
 
-            {/* Floating Card */}
-            <div className="absolute bottom-5 left-5 bg-white rounded-2xl px-5 py-4 shadow-lg">
-              <p className="text-gray-500 text-sm">
-                Root Visual Studio
-              </p>
-              <h3 className="font-bold">
-                We Capture Your Best Moment
-              </h3>
-            </div>
+            
 
           </div>
 
-          {/* Feature */}
-          <div className="grid grid-cols-3 gap-4 mt-5">
-
-            <div className="bg-gray-50 rounded-2xl p-4">
-              <p className="text-sm text-gray-500">
-                Lighting
-              </p>
-              <h4 className="font-semibold">
-                Profesional
-              </h4>
-            </div>
-
-            <div className="bg-gray-50 rounded-2xl p-4">
-              <p className="text-sm text-gray-500">
-                Studio
-              </p>
-              <h4 className="font-semibold">
-                Nyaman & Bersih
-              </h4>
-            </div>
-
-            <div className="bg-gray-50 rounded-2xl p-4">
-              <p className="text-sm text-gray-500">
-                Output
-              </p>
-              <h4 className="font-semibold">
-                Digital / Print
-              </h4>
-            </div>
-
-          </div>
+          
         </div>
       </motion.div>
 

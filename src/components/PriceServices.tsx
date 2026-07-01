@@ -7,44 +7,41 @@ import { FaWhatsapp } from "react-icons/fa";
 const layanan = [
   {
     plan: "Starter",
-    title: "Chemical Rebar",
-    desc: "Pemasangan rebar chemical untuk sambungan tulangan beton yang kuat dan aman.",
-    price: "30.000",
+    title: "Personal / Pas Foto",
+    desc: "Simple, cepat, cocok untuk kebutuhan formal.",
+    price: "Mulai dari 35k",
     badge: false,
     button: "Pilih Layanan",
     points: [
-      "Konsultasi Gratis",
-      "Material Berkualitas",
-      "Teknisi Bersertifikat",
+      "Lightning Clean",
+      "Output Digital/print",
       "Proses Cepat",
     ],
   },
   {
     plan: "Pro",
-    title: "Chemical Anchor",
-    desc: "Layanan pemasangan chemical anchor HILTI dengan standar pekerjaan profesional.",
-    price: "30.000",
+    title: "Couple",
+    desc: "Arahan pose, pilihan backdrop, feel premium.",
+    price: "Mulai dari 150k",
     badge: true,
     button: "Pilih Layanan",
     points: [
-      "Konsultasi Gratis",
-      "Semua Diameter Anchor",
-      "Chemical Berkualitas",
-      "Pekerjaan Presisi",
+      "Arahan Pose",
+      "Retouch Natural",
+      "Pilihan Output",
     ],
   },
   {
     plan: "Premium",
-    title: "Pull Out Test",
-    desc: "Pengujian kekuatan anchor sesuai standar teknik sipil dan laporan hasil lengkap.",
-    price: "100.000",
+    title: "Family /. Wisuda",
+    desc: "Arahan pose, pilihan backdrop, feel premium.",
+    price: "Mulai dari 650k",
     badge: false,
     button: "Pilih Layanan",
     points: [
-      "Laporan Pengujian",
-      "Alat Terkalibrasi",
-      "Operator Berpengalaman",
-      "Standar Teknik",
+      "Style Guidance",
+      "Retouch",
+      "Pilihan Output",
     ],
   },
 ];
@@ -137,7 +134,7 @@ export default function LayananGrid() {
                     Rp
                   </span>
 
-                  <span className="text-5xl font-black ml-2 text-gray-900">
+                  <span className="text-3xl font-black ml-2 text-gray-900">
                     {item.price}
                   </span>
 
@@ -188,17 +185,7 @@ export default function LayananGrid() {
 
         </div>
 
-        <div className="text-center mt-12">
-
-          <a
-            href="https://wa.me/6281234567890"
-            className="inline-flex items-center gap-3 bg-[#ba1322] hover:bg-[#97101c] text-white rounded-full px-8 py-4 font-semibold transition"
-          >
-            <FaWhatsapp />
-            Konsultasi Gratis
-          </a>
-
-        </div>
+        
 
       </div>
 

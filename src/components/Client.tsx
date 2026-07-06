@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FaWhatsapp } from "react-icons/fa";
 
-import pengalamanImg from "../assets/img_6364-2.jpg";
+import pengalamanImg from "../assets/IMG_6364-2.jpg";
 
 export default function C() {
 

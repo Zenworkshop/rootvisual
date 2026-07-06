@@ -12,6 +12,8 @@ import CoringLantai from "./pages/CoringLantai";
 import FireStop from "./pages/FireStop";
 import WaterProofing from "./pages/WaterProofing";
 import SocialButtons from './components/SocialButtons';
+import Gallery from "./pages/Gallery";
+import Paket from "./pages/Paket";
 import ReactPixel from 'react-facebook-pixel';
 
 
@@ -41,6 +43,8 @@ function App() {
           <Route path="/coring-lantai" element={<CoringLantai />} />
           <Route path="/fire-stop" element={<FireStop />} />
           <Route path="/water-proofing" element={<WaterProofing />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/paket" element={<Paket />} />
 
         </Routes>
         <SocialButtons />

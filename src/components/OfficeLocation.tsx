@@ -1,45 +1,126 @@
 import { motion } from "framer-motion";
-import { Mail, Phone } from "lucide-react";
+import { Mail, Phone, MapPin, Clock } from "lucide-react";
+import officeImg from "../assets/IMG_0500-Edit-2.jpg"; // ganti dengan foto studio Root Visual
 
-export default function OfficeLocation () {
+export default function OfficeLocation() {
   return (
-    <section className="bg-[#0f2d46] text-white py-16 px-6 md:px-20">
-      <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12">
-        {/* Image with animation */}
-        <motion.div 
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-          className="w-full md:w-1/2 overflow-hidden rounded-3xl shadow-lg"
+    <section className="bg-gray-50 py-20 px-6 md:px-8">
+      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-14 items-center">
+
+        {/* Gambar */}
+        <motion.div
+          initial={{ opacity: 0, x: -40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          className="overflow-hidden rounded-3xl shadow-2xl"
         >
-          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c" alt="Office" className="w-full object-cover" />
+          <img
+            src={officeImg}
+            alt="Studio Root Visual"
+            className="w-full h-[500px] object-cover"
+          />
         </motion.div>
 
-        {/* Text content with animation */}
-        <motion.div 
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-          className="w-full md:w-1/2 text-center md:text-left"
+        {/* Konten */}
+        <motion.div
+          initial={{ opacity: 0, x: 40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
         >
-          <p className="text-orange-400 uppercase text-sm tracking-wide">Our Office</p>
-          <h2 className="text-3xl font-bold mt-2">Office Location</h2>
-          <p className="mt-4 text-gray-300">
-            Terima kasih atas minat dan kepercayaan Anda pada layanan kami. Kami berharap dapat membantu Anda dalam menghasilkan solusi aluminium terbaik untuk rumah atau proyek Anda.
+          <span className="inline-block bg-black text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
+            📍 Studio Root Visual
+          </span>
+
+          <h2 className="text-4xl font-black text-gray-900 leading-tight">
+            Datang Langsung ke
+            <br />
+            Studio Kami
+          </h2>
+
+          <p className="text-gray-600 mt-6 leading-8">
+            Root Visual merupakan studio foto profesional yang melayani
+            berbagai kebutuhan fotografi mulai dari
+            <strong> pas foto, wisuda, keluarga, couple, maternity,
+            prewedding, wedding, personal branding, corporate portrait,
+            hingga company profile.</strong>
+
+            <br /><br />
+
+            Kami siap membantu Anda mendapatkan hasil foto terbaik dengan
+            studio yang nyaman, fotografer profesional, serta proses yang
+            cepat dan berkualitas.
           </p>
-          <div className="mt-6 space-y-3">
-            <p className="text-lg font-semibold">Our Main Office</p>
-            <p className="text-gray-300">Jl. Pd. Kacang No.rt 2, rw3, Pd. Kacang Tim., Kec. Pd. Aren, Kota Tangerang Selatan, Banten 15226</p>
-            <p className="flex items-center gap-2 text-gray-300">
-              <Mail className="w-5 h-5 text-orange-400" /> zenworkshopid@gmail.com
-            </p>
-            <p className="flex items-center gap-2 text-gray-300">
-              <Phone className="w-5 h-5 text-orange-400" /> +62 812-4499-7748
-            </p>
+
+          <div className="mt-8 space-y-5">
+
+            <div className="flex gap-4">
+              <MapPin className="text-black mt-1" />
+              <div>
+                <h4 className="font-bold text-lg text-gray-900">
+                  Alamat Studio
+                </h4>
+
+                <p className="text-gray-600">
+                  Jl. ......... (isi alamat lengkap Root Visual)
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-4">
+              <Mail className="text-black mt-1" />
+              <div>
+                <h4 className="font-bold text-lg text-gray-900">
+                  Email
+                </h4>
+
+                <p className="text-gray-600">
+                  rootvisual@gmail.com
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-4">
+              <Phone className="text-black mt-1" />
+              <div>
+                <h4 className="font-bold text-lg text-gray-900">
+                  WhatsApp
+                </h4>
+
+                <p className="text-gray-600">
+                  +62 812-4499-7748
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-4">
+              <Clock className="text-black mt-1" />
+              <div>
+                <h4 className="font-bold text-lg text-gray-900">
+                  Jam Operasional
+                </h4>
+
+                <p className="text-gray-600">
+                  Setiap Hari • 08.00 - 21.00 WIB
+                </p>
+              </div>
+            </div>
+
           </div>
+
+          <a
+            href="https://wa.me/6281244997748"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex mt-10 bg-black hover:bg-gray-800 text-white px-8 py-4 rounded-2xl font-semibold transition"
+          >
+            Hubungi Kami
+          </a>
+
         </motion.div>
+
       </div>
     </section>
   );
-};
-
+}

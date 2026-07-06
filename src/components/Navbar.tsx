@@ -45,7 +45,7 @@ export default function Navbar() {
     },
     {
       title: "Paket",
-      path: "/pricing",
+      path: "/paket",
     },
     {
       title: "Kontak",

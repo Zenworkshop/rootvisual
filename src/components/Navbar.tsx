@@ -18,7 +18,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
 
   const whatsappLink =
-    "https://wa.me/6281244997748?text=Halo%20Root%20Visual,%20saya%20ingin%20booking%20studio%20foto.";
+    "https://wa.me/6285117842891?text=Halo%20Root%20Visual,%20saya%20ingin%20booking%20studio%20foto.";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -77,7 +77,7 @@ export default function Navbar() {
             className="flex items-center gap-2 hover:text-white"
           >
             <FiPhone />
-            0812-4499-7748
+            0851-1784-2891
           </a>
 
           <a
@@ -111,10 +111,12 @@ export default function Navbar() {
           </a>
 
           <a
-            href="#"
-            className="hover:text-[#ba1322]"
+            href="https://wa.me/6285117842891?text=Halo%20Root%20Visual,%20saya%20tertarik%20dengan%20layanan%20foto."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-[#25D366] transition"
           >
-            <FaYoutube />
+            <FaWhatsapp />
           </a>
 
         </div>

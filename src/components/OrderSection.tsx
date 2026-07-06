@@ -128,7 +128,7 @@ export default function OrderSection() {
             </p>
 
             <a
-              href="https://wa.me/6281244997748"
+              href="https://wa.me/6285117842891?text=Halo%20Root%20Visual,%20saya%20ingin%20booking%20studio%20foto."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 mt-8 bg-[#ba1322] hover:bg-[#97101c] text-white rounded-full px-7 py-4 font-semibold transition shadow-lg"

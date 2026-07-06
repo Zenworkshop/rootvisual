@@ -4,10 +4,10 @@ import {
   Phone,
   Mail,
   MapPin,
-  Facebook,
   Instagram,
-  Youtube,
 } from "lucide-react";
+
+import { FaTiktok, FaWhatsapp } from "react-icons/fa6";
 
 export default function Footer() {
   return (
@@ -54,21 +54,41 @@ export default function Footer() {
 
               <li>
                 <Link
-                  to="/gallery"
+                  to="/about"
                   className="text-gray-400 hover:text-white transition"
                 >
-                  Portfolio
+                  Tentang
                 </Link>
               </li>
 
               <li>
                 <Link
-                  to="/contact"
+                  to="/Gallery"
                   className="text-gray-400 hover:text-white transition"
                 >
-                  Hubungi Kami
+                  Gallery
                 </Link>
               </li>
+
+              <li>
+                <Link
+                  to="/Paket"
+                  className="text-gray-400 hover:text-white transition"
+                >
+                  Paket
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  to="/Kontak"
+                  className="text-gray-400 hover:text-white transition"
+                >
+                  Kontak
+                </Link>
+              </li>
+
+              
 
             </ul>
 
@@ -84,52 +104,57 @@ export default function Footer() {
 
             <div className="space-y-4 text-sm">
 
-              <div className="flex gap-3">
-
+              <a
+                href="https://wa.me/6285117842891?text=Halo%20Root%20Visual,%20saya%20ingin%20konsultasi%20studio%20foto."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex gap-3 items-start group"
+              >
                 <Phone
                   size={18}
-                  className="text-[#ba1322] mt-1"
+                  className="text-[#ba1322] mt-1 transition-transform group-hover:scale-110"
                 />
 
-                <span className="text-gray-400">
-                  +62 812-4499-7748
+                <span className="text-gray-400 group-hover:text-[#ba1322] transition">
+                  +62 851 1784 2891
                 </span>
+              </a>
 
-              </div>
-
-              <div className="flex gap-3">
-
+              <a
+                href="mailto:rootvisualstudio@gmail.com?subject=Konsultasi%20Root%20Visual%20Studio&body=Halo%20Root%20Visual,%20saya%20ingin%20bertanya%20mengenai%20layanan%20foto."
+                className="flex gap-3 items-start group"
+              >
                 <Mail
                   size={18}
-                  className="text-[#ba1322] mt-1"
+                  className="text-[#ba1322] mt-1 transition-transform group-hover:scale-110"
                 />
 
-                <span className="text-gray-400">
+                <span className="text-gray-400 group-hover:text-[#ba1322] transition">
                   rootvisualstudio@gmail.com
                 </span>
+              </a>
 
-              </div>
-
-              <div className="flex gap-3">
-
+              <a
+                href="https://maps.app.goo.gl/usxcuavrERTBoDLn8"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex gap-3 items-start group"
+              >
                 <MapPin
                   size={18}
-                  className="text-[#ba1322] mt-1 flex-shrink-0"
+                  className="text-[#ba1322] mt-1 flex-shrink-0 transition-transform group-hover:scale-110"
                 />
 
-                <span className="text-gray-400">
-                  Tangerang Selatan,
-                  Banten, Indonesia
+                <span className="text-gray-400 group-hover:text-[#ba1322] transition">
+                  MP7C+FF Benda Baru, Kota Tangerang Selatan, Banten
                 </span>
-
-              </div>
+              </a>
 
             </div>
 
           </div>
 
-          {/* Social */}
-
+           {/* Social */}
           <div>
 
             <h3 className="text-lg font-semibold mb-5">
@@ -143,31 +168,38 @@ export default function Footer() {
             <div className="flex gap-3">
 
               <a
-                href="#"
-                className="w-11 h-11 rounded-full bg-white/10 hover:bg-[#ba1322] transition flex items-center justify-center"
+                href="https://www.instagram.com/rootvisual/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-11 h-11 rounded-full bg-white/10 hover:bg-[#ba1322] transition-all duration-300 hover:-translate-y-1 flex items-center justify-center"
               >
                 <Instagram size={20} />
               </a>
 
               <a
-                href="#"
-                className="w-11 h-11 rounded-full bg-white/10 hover:bg-[#ba1322] transition flex items-center justify-center"
+                href="https://www.tiktok.com/@rootvisual_"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-11 h-11 rounded-full bg-white/10 hover:bg-[#ba1322] transition-all duration-300 hover:-translate-y-1 flex items-center justify-center"
               >
-                <Facebook size={20} />
+                <FaTiktok size={18} />
               </a>
 
               <a
-                href="#"
-                className="w-11 h-11 rounded-full bg-white/10 hover:bg-[#ba1322] transition flex items-center justify-center"
+                href="https://wa.me/6285117842891?text=Halo%20Root%20Visual,%20saya%20ingin%20konsultasi%20studio%20foto."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-11 h-11 rounded-full bg-white/10 hover:bg-[#ba1322] transition-all duration-300 hover:-translate-y-1 flex items-center justify-center"
               >
-                <Youtube size={20} />
+                <FaWhatsapp size={20} />
               </a>
 
             </div>
 
           </div>
 
-        </div>
+        </div> {/* <-- INI YANG KURANG. Penutup div grid */}
+
 
         {/* Bottom */}
 

@@ -63,7 +63,7 @@ export default function OfficeLocation() {
                 </h4>
 
                 <p className="text-gray-600">
-                  Jl. ......... (isi alamat lengkap Root Visual)
+                  02, Jl. H. Rean Gg. Barokah No.46, RW.01, Benda Baru, Kec. Pamulang, Kota Tangerang Selatan, Banten 15415
                 </p>
               </div>
             </div>
@@ -89,7 +89,7 @@ export default function OfficeLocation() {
                 </h4>
 
                 <p className="text-gray-600">
-                  +62 812-4499-7748
+                  +62 8511-7842-891
                 </p>
               </div>
             </div>
@@ -110,7 +110,7 @@ export default function OfficeLocation() {
           </div>
 
           <a
-            href="https://wa.me/6281244997748"
+            href="https://wa.me/6285117842891"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex mt-10 bg-black hover:bg-gray-800 text-white px-8 py-4 rounded-2xl font-semibold transition"

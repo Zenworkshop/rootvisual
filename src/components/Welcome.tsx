@@ -123,7 +123,7 @@ export default function Welcome() {
               </a>
 
               <a
-                href="#portfolio"
+                href="/Gallery"
                 className="
                   inline-flex
                   items-center

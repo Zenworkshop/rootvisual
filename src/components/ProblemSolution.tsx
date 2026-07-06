@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaWhatsapp } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 import chemicalAnchor from "../assets/layanan1.jpg";
 import coringBeton from "../assets/layanan3.jpg";
@@ -88,10 +89,13 @@ export default function LayananGrid() {
                 </p>
 
                 <div className="mt-6">
-                  <button className="font-semibold text-[#ba1322] hover:translate-x-1 transition">
-                    Pelajari Selengkapnya →
-                  </button>
-                </div>
+                  <Link
+                  to="/paket"
+                  className="inline-flex items-center rounded-full border border-[#ba1322] px-5 py-3 font-semibold text-[#ba1322] transition hover:bg-[#ba1322] hover:text-white"
+                >
+                  Pelajari Selengkapnya →
+                </Link>
+              </div>
 
               </div>
 
@@ -128,12 +132,28 @@ export default function LayananGrid() {
             </div>
 
             <a
-              href="https://wa.me/6281234567890?text=Halo%20Root%20Visual,%20saya%20ingin%20konsultasi%20studio%20foto."
+              href="https://wa.me/6285117842891?text=Halo%20Root%20Visual,%20saya%20ingin%20konsultasi%20studio%20foto."
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-3 bg-[#25D366] hover:bg-green-600 text-white px-7 py-4 rounded-2xl font-semibold transition whitespace-nowrap shadow-lg"
+              className="
+                inline-flex
+                items-center
+                gap-3
+                bg-[#ba1322]
+                hover:bg-[#97101c]
+                text-white
+                font-semibold
+                rounded-full
+                px-8
+                py-4
+                transition-all
+                duration-300
+                shadow-lg
+                hover:shadow-xl
+                hover:-translate-y-1
+              "
             >
-              <FaWhatsapp size={22} />
+              <FaWhatsapp className="text-2xl" />
               Konsultasi Sekarang
             </a>
 

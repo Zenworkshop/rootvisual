@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FaWhatsapp } from "react-icons/fa";
 
-import pengalamanImg from "../assets/welcome.jpg";
+import pengalamanImg from "../assets/img_6364-2.jpg";
 
 export default function C() {
 
@@ -95,7 +95,7 @@ export default function C() {
             className="flex gap-4 mt-10 flex-wrap"
           >
             <a
-              href="https://wa.me/6281234567890"
+              href="https://wa.me/6285117842891?text=Halo%20Root%20Visual,%20saya%20ingin%20booking%20studio%20foto."
               className="bg-[#ba1322] text-white rounded-full px-8 py-4 flex items-center gap-2 font-semibold hover:bg-[#97101c] transition"
             >
               <FaWhatsapp />

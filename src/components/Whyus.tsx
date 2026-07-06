@@ -4,61 +4,64 @@ import { CheckCircle } from "lucide-react";
 const features = [
   {
     title: "Fotografer Profesional",
-    desc: "Fotografer berpengalaman dengan arahan pose natural untuk berbagai kebutuhan foto."
+    desc: "Berpengalaman dengan arahan pose natural."
   },
   {
-    title: "Lighting Studio Profesional",
-    desc: "Pencahayaan berkualitas menghasilkan foto tajam, cerah, dan natural."
+    title: "Lighting Studio",
+    desc: "Pencahayaan profesional menghasilkan foto lebih tajam."
   },
   {
-    title: "Editing Berkualitas",
-    desc: "Retouch profesional dengan hasil tetap natural dan elegan."
+    title: "Editing Premium",
+    desc: "Retouch natural dengan warna yang elegan."
   },
   {
-    title: "Paket Foto Lengkap",
-    desc: "Tersedia paket wisuda, keluarga, couple, prewedding, wedding hingga corporate."
+    title: "Paket Lengkap",
+    desc: "Wisuda, keluarga, wedding hingga corporate."
   },
   {
     title: "Arahan Pose",
-    desc: "Tidak perlu pengalaman, kami membantu pose agar lebih percaya diri."
+    desc: "Tidak perlu pengalaman saat sesi foto."
   },
   {
-    title: "File Digital & Cetak",
-    desc: "Mendapatkan file resolusi tinggi dan pilihan cetak premium."
+    title: "File HD & Cetak",
+    desc: "Resolusi tinggi dengan opsi cetak premium."
   },
   {
     title: "Booking Mudah",
-    desc: "Reservasi cepat melalui WhatsApp dengan jadwal yang fleksibel."
+    desc: "Reservasi cepat melalui WhatsApp."
   },
   {
     title: "Harga Transparan",
-    desc: "Harga jelas tanpa biaya tersembunyi sesuai paket pilihan."
+    desc: "Tanpa biaya tersembunyi."
   },
   {
     title: "Berbagai Kebutuhan",
-    desc: "Cocok untuk personal, keluarga, bisnis, hingga company profile."
+    desc: "Personal, keluarga maupun bisnis."
   },
   {
-    title: "Dipercaya Banyak Klien",
-    desc: "Ratusan pelanggan telah mengabadikan momen terbaik bersama Root Visual."
+    title: "Dipercaya Klien",
+    desc: "Ratusan pelanggan telah menggunakan Root Visual."
   },
 ];
 
 const titleVariants = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: {
+    opacity: 0,
+    y: 25,
+  },
   visible: {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.6,
-      ease: "easeOut",
+      duration: .6,
     },
   },
 };
 
 export default function WhyUs() {
   return (
-    <section className="bg-[#1e3a5f] py-10 px-4 md:px-8">
+    <section className="bg-gradient-to-br from-[#17314d] via-[#1e3a5f] to-[#264872] py-12 px-4 md:px-8">
+
       <div className="max-w-6xl mx-auto">
 
         {/* Heading */}
@@ -67,59 +70,93 @@ export default function WhyUs() {
           whileInView="visible"
           viewport={{ once: true }}
           variants={titleVariants}
-          className="text-center mb-8"
+          className="text-center mb-10"
         >
-          <h3 className="text-orange-400 text-xs font-semibold uppercase tracking-[0.2em]">
-            Keunggulan Kami
-          </h3>
 
-          <h2 className="text-3xl md:text-4xl font-bold text-white mt-2">
-            Mengapa Root Visual?
+          <span className="inline-block px-4 py-1 rounded-full bg-orange-400/10 border border-orange-400/30 text-orange-300 text-xs font-semibold uppercase tracking-[3px]">
+            Why Choose Us
+          </span>
+
+          <h2 className="text-3xl md:text-4xl font-black text-white mt-4">
+            Mengapa Memilih
+            <span className="text-orange-400"> Root Visual?</span>
           </h2>
+
+          <p className="max-w-2xl mx-auto text-gray-300 mt-3 text-sm md:text-base leading-7">
+            Kami menghadirkan pengalaman foto studio yang nyaman,
+            profesional, dan berkualitas tinggi untuk setiap momen penting Anda.
+          </p>
+
         </motion.div>
 
-        {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+        {/* Cards */}
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
 
           {features.map((feature, index) => (
 
-            <div
+            <motion.div
               key={index}
+              initial={{
+                opacity: 0,
+                y: 20,
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+              }}
+              viewport={{ once: true }}
+              transition={{
+                delay: index * .05,
+              }}
+              whileHover={{
+                y: -4,
+              }}
               className="
                 flex
                 items-start
-                gap-3
-                bg-[#2a4468]
+                gap-4
+                rounded-2xl
                 border
-                border-[#3b587f]
-                rounded-xl
+                border-white/10
+                bg-white/5
+                backdrop-blur-sm
                 p-4
-                transition
-                hover:shadow-lg
+                hover:border-orange-400/40
+                hover:bg-white/10
+                duration-300
               "
             >
 
-              <div className="text-orange-400 mt-1 flex-shrink-0">
-                <CheckCircle size={22} />
+              <div className="w-10 h-10 rounded-full bg-orange-400/15 flex items-center justify-center flex-shrink-0">
+
+                <CheckCircle
+                  size={20}
+                  className="text-orange-400"
+                />
+
               </div>
 
               <div>
-                <h3 className="text-base font-semibold text-white">
+
+                <h3 className="text-white font-semibold text-base">
                   {feature.title}
                 </h3>
 
-                <p className="text-sm text-gray-300 leading-6 mt-1">
+                <p className="text-gray-300 text-sm mt-1 leading-6">
                   {feature.desc}
                 </p>
+
               </div>
 
-            </div>
+            </motion.div>
 
           ))}
 
         </div>
 
       </div>
+
     </section>
   );
 }

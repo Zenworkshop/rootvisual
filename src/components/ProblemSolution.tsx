@@ -2,81 +2,147 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FaWhatsapp } from "react-icons/fa";
 
-import chemicalAnchor from "../assets/layanan1.jpg"; // Ganti dengan path gambar yang sesuai
-import coringBeton from "../assets/layanan3.jpg"; // Ganti dengan path gambar yang sesuai
-import pullOutTest from "../assets/layanan2.jpg"; // Ganti dengan path gambar yang sesuai
+import chemicalAnchor from "../assets/layanan1.jpg";
+import coringBeton from "../assets/layanan3.jpg";
+import pullOutTest from "../assets/layanan2.jpg";
 
 const layanan = [
   {
     image: chemicalAnchor,
-    title: "Foto Wisuda, Keluarga, Couple & Wedding",
-    desc: "Layanan jasa foto wisuda, foto keluarga, couple, prewedding, dan wedding dengan studio profesional, arahan pose yang nyaman, serta hasil foto berkualitas tinggi yang siap dicetak maupun dibagikan ke media sosial.",
+    title: "Foto Wisuda, Keluarga & Wedding",
+    desc: "Foto wisuda, keluarga, couple, prewedding hingga wedding dengan arahan pose profesional dan hasil berkualitas tinggi.",
   },
   {
     image: coringBeton,
-    title: "Pas Foto Profesional & Dokumen Resmi",
-    desc: "Layanan pas foto profesional untuk lamaran kerja, sekolah, visa, paspor, KTP, SIM, dan dokumen resmi lainnya dengan pencahayaan studio, proses cepat, serta hasil berkualitas tinggi sesuai standar administrasi.",
+    title: "Pas Foto Profesional",
+    desc: "Pas foto untuk kerja, sekolah, visa, paspor, dan dokumen resmi dengan pencahayaan studio profesional.",
   },
   {
     image: pullOutTest,
-    title: "File Digital, Cetak Foto & Bingkai Premium",
-    desc: "Kami menyediakan file foto digital, cetak foto dengan kualitas terbaik, serta frame premium yang siap dipajang di rumah, kantor, atau dijadikan hadiah untuk keluarga dan orang terdekat.",
+    title: "Cetak Foto & Frame Premium",
+    desc: "File digital resolusi tinggi lengkap dengan layanan cetak foto premium dan pilihan frame eksklusif.",
   },
 ];
 
 export default function LayananGrid() {
   return (
-    <section className="bg-[#ba1322] py-12 px-4 md:px-8">
+    <section className="bg-gradient-to-br from-[#ba1322] via-[#b61524] to-[#8d0f1b] py-10 px-4 md:px-8">
+
       <div className="max-w-6xl mx-auto">
 
-        {/* Card */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {/* Heading */}
+        <div className="text-center mb-10">
+
+          <span className="inline-block bg-white/20 text-white px-4 py-1 rounded-full text-sm tracking-wider uppercase">
+            Layanan Kami
+          </span>
+
+          <h2 className="text-3xl md:text-4xl font-bold text-white mt-4">
+            Solusi Foto Profesional
+          </h2>
+
+          <p className="text-white/80 mt-3 max-w-2xl mx-auto leading-7">
+            Root Visual menghadirkan berbagai layanan studio foto profesional
+            dengan kualitas terbaik untuk kebutuhan pribadi maupun bisnis.
+          </p>
+
+        </div>
+
+        {/* Cards */}
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
           {layanan.map((item, index) => (
+
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 40 }}
+              initial={{ opacity: 0, y: 35 }}
               whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ y: -8 }}
               viewport={{ once: true }}
               transition={{
-                duration: 0.6,
-                delay: index * 0.15,
+                duration: .45,
+                delay: index * .15,
               }}
-              whileHover={{ y: -6 }}
-              className="bg-white/10 backdrop-blur-md rounded-2xl overflow-hidden shadow-xl"
+              className="group overflow-hidden rounded-3xl bg-white shadow-2xl"
             >
-              <img
-                src={item.image}
-                alt={item.title}
-                className="w-full h-56 object-cover"
-              />
+
+              <div className="overflow-hidden">
+
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="h-60 w-full object-cover duration-700 group-hover:scale-110"
+                />
+
+              </div>
 
               <div className="p-6">
-                <h3 className="text-xl font-bold text-white mb-3 leading-snug">
+
+                <h3 className="text-xl font-bold text-gray-900 leading-snug">
                   {item.title}
                 </h3>
 
-                <p className="text-white/80 text-[15px] leading-6">
+                <p className="text-gray-600 mt-3 leading-7">
                   {item.desc}
                 </p>
+
+                <div className="mt-6">
+                  <button className="font-semibold text-[#ba1322] hover:translate-x-1 transition">
+                    Pelajari Selengkapnya →
+                  </button>
+                </div>
+
               </div>
+
             </motion.div>
+
           ))}
+
         </div>
 
         {/* CTA */}
-        <div className="mt-10 text-center">
-          <a
-            href="https://wa.me/6281234567890?text=Halo%20saya%20ingin%20konsultasi%20mengenai%20layanan%20studio%20foto"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 bg-white text-[#ba1322] px-7 py-3.5 rounded-full text-base font-semibold hover:bg-[#e64a4a] hover:text-white transition duration-300 shadow-xl"
-          >
-            <FaWhatsapp size={22} />
-            Konsultasi via WhatsApp
-          </a>
-        </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: .5 }}
+          className="mt-12"
+        >
+
+          <div className="bg-white rounded-3xl p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-2xl">
+
+            <div>
+
+              <h3 className="text-2xl font-bold text-gray-900">
+                Bingung Memilih Paket?
+              </h3>
+
+              <p className="text-gray-600 mt-2 max-w-xl">
+                Konsultasikan kebutuhan foto Anda dengan tim Root Visual.
+                Kami akan membantu memilih paket yang paling sesuai dengan
+                kebutuhan dan budget Anda.
+              </p>
+
+            </div>
+
+            <a
+              href="https://wa.me/6281234567890?text=Halo%20Root%20Visual,%20saya%20ingin%20konsultasi%20studio%20foto."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 bg-[#25D366] hover:bg-green-600 text-white px-7 py-4 rounded-2xl font-semibold transition whitespace-nowrap shadow-lg"
+            >
+              <FaWhatsapp size={22} />
+              Konsultasi Sekarang
+            </a>
+
+          </div>
+
+        </motion.div>
 
       </div>
+
     </section>
   );
 }

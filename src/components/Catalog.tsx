@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+
 import proyek1 from "../assets/IMG_0500-Edit-2.jpg";
 import proyek2 from "../assets/IMG_0502-Edit-4.jpg";
 import proyek3 from "../assets/IMG_0604.jpg";
@@ -17,9 +18,21 @@ import proyek14 from "../assets/IMG_4826.jpg";
 import proyek15 from "../assets/IMG_4877-2.jpg";
 
 const images = [
-  proyek1, proyek2, proyek3, proyek4, proyek5,
-  proyek6, proyek7, proyek8, proyek9, proyek10,
-  proyek11, proyek12, proyek13, proyek14, proyek15
+  proyek1,
+  proyek2,
+  proyek3,
+  proyek4,
+  proyek5,
+  proyek6,
+  proyek7,
+  proyek8,
+  proyek9,
+  proyek10,
+  proyek11,
+  proyek12,
+  proyek13,
+  proyek14,
+  proyek15,
 ];
 
 export default function Newproject() {
@@ -32,94 +45,214 @@ export default function Newproject() {
   };
 
   const closeModal = () => setIsOpen(false);
-  const nextImage = () => setActiveIndex((activeIndex + 1) % images.length);
+
+  const nextImage = () =>
+    setActiveIndex((prev) => (prev + 1) % images.length);
+
   const prevImage = () =>
-    setActiveIndex((activeIndex - 1 + images.length) % images.length);
+    setActiveIndex((prev) => (prev - 1 + images.length) % images.length);
 
   useEffect(() => {
     const handleKeyDown = (e) => {
-      if (e.key === "Escape") {
-        closeModal();
-      }
+      if (e.key === "Escape") closeModal();
+      if (e.key === "ArrowRight") nextImage();
+      if (e.key === "ArrowLeft") prevImage();
     };
 
     if (isOpen) {
       window.addEventListener("keydown", handleKeyDown);
     }
 
-    return () => {
-      window.removeEventListener("keydown", handleKeyDown);
-    };
+    return () => window.removeEventListener("keydown", handleKeyDown);
   }, [isOpen]);
 
   return (
-    <section className="py-16 px-4 md:px-8 max-w-6xl mx-auto">
-      <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">Portofolio</h2>
+    <section className="py-12 px-4 md:px-8">
 
-       <p className="max-w-3xl mx-auto text-gray-600 text-lg leading-8 mt-5 text-center mb-12">
-        Pilihan hasil foto studio, photobox, dan kebutuhan profesional.
+      <div className="max-w-7xl mx-auto">
 
+        {/* Heading */}
+        <div className="text-center mb-8">
 
-      </p>
+          <span className="inline-block text-[#ba1322] font-semibold uppercase tracking-[3px] text-sm">
+            Portofolio
+          </span>
 
-      <div className="columns-2 md:columns-3 gap-4 space-y-4">
-        {images.map((src, index) => (
-          <div
-            key={index}
-            className="w-full overflow-hidden rounded-lg shadow hover:shadow-xl cursor-pointer break-inside-avoid"
-            onClick={() => openModal(index)}
+          <h2 className="text-3xl md:text-5xl font-black text-gray-900 mt-3">
+            Hasil Foto Root Visual
+          </h2>
+
+          <p className="max-w-2xl mx-auto mt-4 text-gray-600 leading-7">
+            Dokumentasi berbagai sesi foto studio mulai dari wisuda,
+            keluarga, couple, personal branding hingga kebutuhan bisnis.
+          </p>
+
+        </div>
+
+        {/* Gallery */}
+        <div className="columns-2 md:columns-3 gap-5 space-y-5">
+
+          {images.map((src, index) => (
+
+            <div
+              key={index}
+              onClick={() => openModal(index)}
+              className="
+                overflow-hidden
+                rounded-2xl
+                cursor-pointer
+                break-inside-avoid
+                shadow-md
+                hover:shadow-2xl
+                transition-all
+                duration-500
+              "
+            >
+
+              <img
+                src={src}
+                alt={`Portofolio ${index + 1}`}
+                loading="lazy"
+                className="
+                  w-full
+                  h-auto
+                  object-cover
+                  transition-transform
+                  duration-700
+                  hover:scale-105
+                "
+              />
+
+            </div>
+
+          ))}
+
+        </div>
+
+        {/* Button */}
+        <div className="text-center mt-10">
+
+          <Link
+            to="/gallery"
+            className="
+              inline-flex
+              items-center
+              gap-2
+              bg-[#ba1322]
+              hover:bg-[#97101c]
+              text-white
+              font-semibold
+              rounded-full
+              px-7
+              py-3
+              transition-all
+              shadow-lg
+            "
           >
-            <img
-              src={src}
-              alt={`Proyek ${index + 1}`}
-              className="w-full h-auto object-cover transition-transform duration-300 hover:scale-[1.02]"
-              loading="lazy"
-            />
-          </div>
-        ))}
+            Lihat Semua Galeri →
+          </Link>
+
+        </div>
+
       </div>
 
+      {/* Modal */}
       {isOpen && (
+
         <div
-          className="fixed inset-0 bg-black bg-opacity-80 z-50 flex items-center justify-center"
           onClick={closeModal}
+          className="
+            fixed
+            inset-0
+            z-50
+            bg-black/90
+            backdrop-blur-sm
+            flex
+            items-center
+            justify-center
+            p-5
+          "
         >
-          <div className="relative max-w-5xl mx-auto" onClick={(e) => e.stopPropagation()}>
+
+          <div
+            onClick={(e) => e.stopPropagation()}
+            className="relative"
+          >
+
+            {/* Close */}
             <button
-              className="absolute top-4 right-6 text-white text-3xl"
               onClick={closeModal}
+              className="
+                absolute
+                -top-12
+                right-0
+                text-white
+                text-4xl
+              "
             >
-              &times;
+              ×
             </button>
 
+            {/* Prev */}
             <button
-              className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-4xl"
               onClick={prevImage}
+              className="
+                absolute
+                left-3
+                top-1/2
+                -translate-y-1/2
+                w-12
+                h-12
+                rounded-full
+                bg-white/20
+                hover:bg-white/30
+                text-white
+                text-3xl
+                backdrop-blur
+              "
             >
-              &#10094;
+              ‹
             </button>
 
             <img
               src={images[activeIndex]}
-              alt={`Preview ${activeIndex + 1}`}
-              className="max-w-full max-h-[90vh] object-contain rounded-lg shadow-lg"
+              alt=""
+              className="
+                max-h-[90vh]
+                max-w-full
+                rounded-2xl
+                object-contain
+                shadow-2xl
+              "
             />
 
+            {/* Next */}
             <button
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-4xl"
               onClick={nextImage}
+              className="
+                absolute
+                right-3
+                top-1/2
+                -translate-y-1/2
+                w-12
+                h-12
+                rounded-full
+                bg-white/20
+                hover:bg-white/30
+                text-white
+                text-3xl
+                backdrop-blur
+              "
             >
-              &#10095;
+              ›
             </button>
+
           </div>
+
         </div>
+
       )}
 
-      <div className="text-center mt-10">
-        <Link to="/gallery" className="inline-block bg-[#0D2C40] hover:bg-[#133C56] text-white px-6 py-3 rounded-lg text-base font-semibold transition">
-          Lihat Semua Proyek Kami →
-        </Link>
-      </div>
     </section>
   );
 }

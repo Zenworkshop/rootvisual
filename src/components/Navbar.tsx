@@ -9,7 +9,7 @@ import {
 } from "react-icons/fa";
 import { MdOutlineMail, MdAccessTime } from "react-icons/md";
 import { FiPhone } from "react-icons/fi";
-import logo from "../assets/rv2-b.png";
+import logo from "../assets/logoroot.png";
 
 export default function Navbar() {
   const location = useLocation();

@@ -1,13 +1,9 @@
 "use client";
 
-import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { FaWhatsapp } from "react-icons/fa";
+import React from "react";
+import { motion } from "framer-motion";
+import { FaGoogle } from "react-icons/fa";
 import { BsStarFill } from "react-icons/bs";
-import { FiPlus, FiMinus } from "react-icons/fi";
-
-// Import gambar proyek (pastikan path sesuai)
-import proyek19 from "../assets/HILTI/cr1.png";
 
 const testimonials = [
   {
@@ -48,94 +44,87 @@ const testimonials = [
   },
 ];
 
-const faqs = [
-  {
-    question: "Apakah partisi kaca aluminium cukup kuat dan aman?",
-    answer:
-      "Sangat aman. Menggunakan kaca tempered dan rangka aluminium yang kuat, sehingga tahan benturan dan tidak mudah rusak.",
-  },
-  {
-    question: "Apakah bisa custom ukuran dan bentuk sesuai ruangan?",
-    answer:
-      "Tentu bisa. Kami melayani pembuatan partisi kaca custom sesuai layout dan kebutuhan ruangan Anda.",
-  },
-  {
-    question: "Cocok nggak untuk ruang kantor atau cafe?",
-    answer:
-      "Sangat cocok! Banyak klien kami dari sektor komersial seperti kantor, cafe, dan ruang meeting.",
-  },
-  {
-    question: "Berapa lama proses produksi dan pemasangannya?",
-    answer:
-      "Proses pengerjaan rata-rata 5–10 hari kerja tergantung desain dan lokasi pemasangan.",
-  },
-];
-
-export default function HiltiTestimonialsAndFaq() {
-  const [faqIndex, setFaqIndex] = useState<number | null>(null);
-
+export default function RootVisualTestimonials() {
   return (
-    <>
-      {/* Testimonial Section */}
-      <section className="bg-[#1e3a5f] py-20 px-4 md:px-8 min-h-screen flex flex-col items-center justify-center">
-        <h2 className="text-4xl font-bold text-white mb-12 text-center max-w-3xl">
-          Testimonial Aplikator Hilti Profesional dan Terpercaya
-        </h2>
+    <section className="bg-[#1e3a5f] py-14 px-4 md:px-8">
 
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
+      <div className="max-w-7xl mx-auto">
+
+        {/* Heading */}
+        <div className="text-center mb-10">
+          <h3 className="text-orange-400 font-semibold uppercase tracking-widest text-sm">
+            Testimonial
+          </h3>
+
+          <h2 className="text-3xl md:text-4xl font-bold text-white mt-2">
+            Apa Kata Pelanggan Root Visual?
+          </h2>
+
+          <p className="text-gray-300 mt-3 max-w-2xl mx-auto leading-7">
+            Kepuasan pelanggan adalah prioritas kami. Berikut pengalaman mereka
+            setelah melakukan sesi foto di Root Visual Studio.
+          </p>
+        </div>
+
+        {/* Card */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
           {testimonials.map((item, index) => (
+
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
-              whileHover={{ scale: 1.05 }}
-              transition={{ delay: index * 0.15, type: "spring", stiffness: 300 }}
-              className="
-                flex flex-col bg-[#2a4468] rounded-lg shadow-lg overflow-hidden
-                hover:shadow-xl transition-shadow duration-300
-                border border-[#3b587f]
-                cursor-pointer
-                p-6
-              "
+              whileHover={{ y: -5 }}
+              viewport={{ once: true }}
+              transition={{
+                duration: 0.4,
+                delay: index * 0.1,
+              }}
+              className="bg-[#2a4468] rounded-2xl border border-[#3b587f] p-5 shadow-lg"
             >
-              <div className="flex items-center mb-4">
-                <div className="flex items-center gap-1">
-                  {Array.from({ length: item.stars }).map((_, i) => (
-                    <BsStarFill key={i} className="text-yellow-400" size={20} />
-                  ))}
-                </div>
+
+              <div className="flex gap-1 mb-3">
+                {Array.from({ length: item.stars }).map((_, i) => (
+                  <BsStarFill
+                    key={i}
+                    className="text-yellow-400"
+                    size={18}
+                  />
+                ))}
               </div>
 
-              <p className="text-gray-300 text-sm flex-grow">{item.review}</p>
+              <p className="text-gray-300 leading-7 text-sm">
+                "{item.review}"
+              </p>
 
-              <div className="mt-6 text-right text-[#cbd5e1] font-semibold text-lg">
+              <p className="mt-5 text-white font-semibold">
                 — {item.name}
-              </div>
+              </p>
+
             </motion.div>
+
           ))}
+
         </div>
 
-        <div className="mt-16 text-center">
+        {/* CTA */}
+        <div className="text-center mt-10">
+
           <a
-            href="https://www.google.com/maps/place/YourBusinessLocationHere" // Ganti sesuai URL lokasi Google Maps aplikator Hilti kamu
+            href="https://maps.app.goo.gl/KY2vcSChbrzkdVPx6"
             target="_blank"
             rel="noopener noreferrer"
-            className="
-              inline-flex items-center gap-3
-              bg-[#2a4468] text-[#cbd5e1] px-8 py-4 rounded-full
-              text-lg font-semibold border border-[#3b587f]
-              hover:bg-[#274463] hover:text-white
-              transition shadow-lg cursor-pointer
-            "
+            className="inline-flex items-center gap-3 bg-white text-[#1e3a5f] px-7 py-3 rounded-full font-semibold hover:bg-gray-100 transition"
           >
-            <FaWhatsapp size={24} />
-            Lihat Review di Google
+            <FaGoogle />
+            Lihat Review Google
           </a>
-        </div>
-      </section>
 
-      {/* FAQ Partisi Kaca Aluminium */}
-      
-    </>
+        </div>
+
+      </div>
+
+    </section>
   );
 }

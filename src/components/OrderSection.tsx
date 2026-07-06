@@ -2,34 +2,34 @@
 
 import { motion } from "framer-motion";
 import { FaWhatsapp } from "react-icons/fa";
-import hiltiImg from "../assets/sectionn.png"; // Ganti jika ada gambar HILTI yang lebih sesuai
+import studioImg from "../assets/IMG_5940.jpg";
 
 const steps = [
   {
     id: "01",
-    title: "Hubungi & Pilih Paket Foto",
-    desc: "Konsultasikan kebutuhan Anda melalui WhatsApp, lalu pilih paket foto yang sesuai mulai dari wisuda, keluarga, wedding, personal branding, hingga corporate portrait.",
+    title: "Hubungi & Pilih Paket",
+    desc: "Konsultasikan kebutuhan dan pilih paket foto yang sesuai.",
   },
   {
     id: "02",
-    title: "Booking Jadwal Pemotretan",
-    desc: "Tentukan tanggal dan jam yang diinginkan. Tim Root Visual akan membantu memilih jadwal terbaik sesuai kebutuhan Anda.",
+    title: "Booking Jadwal",
+    desc: "Pilih tanggal dan jam pemotretan sesuai jadwal Anda.",
   },
   {
     id: "03",
-    title: "Sesi Foto Profesional",
-    desc: "Datang ke studio dan nikmati sesi foto bersama fotografer profesional dengan arahan pose, lighting studio, serta suasana yang nyaman.",
+    title: "Sesi Foto",
+    desc: "Nikmati sesi foto dengan fotografer profesional dan arahan pose terbaik.",
     highlight: true,
   },
   {
     id: "04",
-    title: "Editing & Seleksi Foto",
-    desc: "Setiap foto diproses melalui tahap editing profesional agar warna, pencahayaan, dan detail terlihat lebih maksimal dengan tetap natural.",
+    title: "Editing Foto",
+    desc: "Foto diproses dengan editing profesional agar hasil lebih maksimal.",
   },
   {
     id: "05",
-    title: "File Digital & Cetak Foto",
-    desc: "Hasil foto dikirim dalam format digital berkualitas tinggi dan dapat dilanjutkan dengan layanan cetak foto maupun frame premium.",
+    title: "File & Cetak",
+    desc: "Terima file digital berkualitas tinggi serta layanan cetak premium.",
   },
 ];
 
@@ -37,101 +37,140 @@ const containerVariant = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: { staggerChildren: 0.2 },
+    transition: {
+      staggerChildren: 0.15,
+    },
   },
 };
 
 const itemVariant = {
-  hidden: { opacity: 0, y: 30 },
+  hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: "easeOut" },
+    transition: {
+      duration: 0.5,
+      ease: "easeOut",
+    },
   },
 };
 
 export default function OrderSection() {
   return (
-    <section className="bg-gray-50 py-16 px-10 md:px-32">
+    <section className="bg-gray-50 py-10 px-4 md:px-8">
+
       <div className="max-w-6xl mx-auto">
 
-        {/* Judul */}
+        {/* Heading */}
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           variants={itemVariant}
-          className="text-center"
+          className="text-center mb-8"
         >
-          <h3 className="text-orange-500 text-sm font-semibold uppercase tracking-widest">
-            Layanan Aplikator
+          <h3 className="text-orange-500 text-xs font-semibold uppercase tracking-[0.2em]">
+            Cara Booking
           </h3>
-          <h2 className="text-4xl font-bold text-gray-800 mt-2">
-             Proses Booking Studio Foto Root Visual
+
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-2">
+            Proses Booking Studio Foto Root Visual
           </h2>
         </motion.div>
 
-        {/* Layout Grid */}
-        <div className="mt-10 grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-10 items-start">
+        {/* Layout */}
+        <div className="grid lg:grid-cols-[0.9fr_1.3fr] gap-8 items-start">
 
-          {/* Gambar & Deskripsi */}
-          <div className="flex flex-col items-center md:items-start">
-            <div className="w-[70%] max-w-xs md:w-full md:max-w-md overflow-hidden rounded-lg shadow-lg mx-auto md:mx-0">
-              <img 
-                src={hiltiImg} 
-                alt="Layanan HILTI" 
-                className="w-full h-auto object-cover" 
+          {/* Left */}
+          <div>
+
+            <div className="overflow-hidden rounded-2xl shadow-lg">
+              <img
+                src={studioImg}
+                alt="Root Visual"
+                className="w-full h-[320px] object-cover"
               />
             </div>
-            <p className="mt-5 text-gray-600 text-lg leading-7 text-center md:text-left">
-              Root Visual merupakan <span className="font-semibold">studio foto profesional</span>
-              yang melayani foto wisuda, keluarga, couple, prewedding, wedding, pas foto,
-              personal branding, corporate portrait, hingga company profile dengan fotografer
-              berpengalaman dan hasil foto berkualitas tinggi.
+
+            <p className="mt-4 text-gray-600 text-sm leading-7">
+              <span className="font-semibold">
+                Root Visual
+              </span>{" "}
+              melayani foto wisuda, keluarga, couple,
+              prewedding, wedding, personal branding,
+              corporate portrait, hingga company profile
+              dengan hasil profesional.
             </p>
 
-            {/* Tombol Kontak WA */}
-            <div className="w-full flex justify-center md:justify-start">
-              <a
-                href="https://wa.me/6281244997748?text=Halo%20Zen%20Workshop,%20saya%20ingin%20konsultasi%20aplikator%20HILTI."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-6 inline-flex items-center gap-2 px-6 py-3 bg-[#25D366] hover:bg-green-500 text-white rounded-lg shadow-md transition"
-              >
-                <FaWhatsapp size={24} />
-                Konsultasi Sekarang
-              </a>
-            </div>
+            <a
+              href="https://wa.me/6281244997748"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 mt-5 px-5 py-3 rounded-xl bg-[#25D366] hover:bg-green-500 text-white font-semibold transition"
+            >
+              <FaWhatsapp />
+              Konsultasi Sekarang
+            </a>
+
           </div>
 
-          {/* Langkah-langkah */}
+          {/* Right */}
           <motion.div
-            className="grid grid-cols-1 gap-6"
             variants={containerVariant}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
+            className="space-y-4"
           >
+
             {steps.map((step) => (
+
               <motion.div
                 key={step.id}
-                className={`p-5 border rounded-lg shadow-md transition-all duration-300 ${
-                  step.highlight ? "bg-[#1e3a5f] text-white" : "bg-white hover:shadow-lg"
-                }`}
                 variants={itemVariant}
+                className={`
+                  rounded-xl
+                  border
+                  p-4
+                  transition
+                  ${
+                    step.highlight
+                      ? "bg-[#1e3a5f] text-white border-[#1e3a5f]"
+                      : "bg-white border-gray-200 hover:shadow-md"
+                  }
+                `}
               >
-                <h3 className={`text-xl font-semibold ${step.highlight ? "text-white" : "text-gray-800"}`}>
-                  {step.id} {step.title}
+
+                <h3
+                  className={`font-semibold text-lg ${
+                    step.highlight
+                      ? "text-white"
+                      : "text-gray-900"
+                  }`}
+                >
+                  {step.id}. {step.title}
                 </h3>
-                <p className={`mt-2 ${step.highlight ? "text-gray-200" : "text-gray-600"}`}>
+
+                <p
+                  className={`mt-1 text-sm leading-6 ${
+                    step.highlight
+                      ? "text-gray-200"
+                      : "text-gray-600"
+                  }`}
+                >
                   {step.desc}
                 </p>
+
               </motion.div>
+
             ))}
+
           </motion.div>
 
         </div>
+
       </div>
+
     </section>
   );
 }

@@ -30,9 +30,9 @@ export default function Navbar() {
           </a>
         </div>
         <div className="flex space-x-4">
-          <a href="https://www.tiktok.com/@zenworkshop" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300"><FaTiktok /></a>
+          <a href="https://www.tiktok.com/@rootvisual_" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300"><FaTiktok /></a>
           <a href="https://www.youtube.com/@zenworkshop" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300"><FaYoutube /></a>
-          <a href="https://instagram.com/zenworkshopid" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300"><FaInstagram /></a>
+          <a href="https://www.instagram.com/rootvisual/" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300"><FaInstagram /></a>
           <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="hover:text-gray-300"><FaWhatsapp /></a>
         </div>
       </div>

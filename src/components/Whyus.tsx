@@ -3,44 +3,44 @@ import { CheckCircle } from "lucide-react";
 
 const features = [
   {
-    title: "Fotografer Profesional & Berpengalaman",
-    desc: "Tim fotografer kami berpengalaman menangani foto wisuda, keluarga, wedding, couple, personal branding, hingga corporate portrait dengan arahan pose yang natural."
+    title: "Fotografer Profesional",
+    desc: "Fotografer berpengalaman dengan arahan pose natural untuk berbagai kebutuhan foto."
   },
   {
-    title: "Studio Foto Nyaman dengan Lighting Profesional",
-    desc: "Menggunakan lighting studio berkualitas tinggi sehingga hasil foto lebih tajam, cerah, dan memiliki warna yang natural tanpa pencahayaan berlebihan."
+    title: "Lighting Studio Profesional",
+    desc: "Pencahayaan berkualitas menghasilkan foto tajam, cerah, dan natural."
   },
   {
-    title: "Hasil Foto Berkualitas Tinggi",
-    desc: "Setiap foto melalui proses editing profesional untuk menghasilkan warna, detail, dan pencahayaan yang lebih maksimal tanpa menghilangkan kesan alami."
+    title: "Editing Berkualitas",
+    desc: "Retouch profesional dengan hasil tetap natural dan elegan."
   },
   {
-    title: "Pilihan Paket Foto Lengkap",
-    desc: "Tersedia paket foto wisuda, keluarga, couple, prewedding, wedding, pas foto, personal branding, corporate portrait, hingga company profile sesuai kebutuhan Anda."
+    title: "Paket Foto Lengkap",
+    desc: "Tersedia paket wisuda, keluarga, couple, prewedding, wedding hingga corporate."
   },
   {
-    title: "Arahan Pose yang Mudah & Natural",
-    desc: "Tidak perlu khawatir jika belum pernah foto studio. Fotografer kami akan membantu mengarahkan pose sehingga hasil foto terlihat lebih percaya diri dan elegan."
+    title: "Arahan Pose",
+    desc: "Tidak perlu pengalaman, kami membantu pose agar lebih percaya diri."
   },
   {
-    title: "File Digital & Cetak Premium",
-    desc: "Selain file digital resolusi tinggi, kami juga menyediakan layanan cetak foto premium dan frame eksklusif yang siap dipajang atau dijadikan hadiah."
+    title: "File Digital & Cetak",
+    desc: "Mendapatkan file resolusi tinggi dan pilihan cetak premium."
   },
   {
-    title: "Booking Mudah & Jadwal Fleksibel",
-    desc: "Reservasi dapat dilakukan melalui WhatsApp dengan pilihan jadwal yang fleksibel sehingga lebih mudah menyesuaikan waktu Anda."
+    title: "Booking Mudah",
+    desc: "Reservasi cepat melalui WhatsApp dengan jadwal yang fleksibel."
   },
   {
-    title: "Harga Terjangkau & Transparan",
-    desc: "Seluruh paket studio foto memiliki harga yang jelas tanpa biaya tersembunyi, sehingga Anda bisa memilih paket sesuai kebutuhan dan anggaran."
+    title: "Harga Transparan",
+    desc: "Harga jelas tanpa biaya tersembunyi sesuai paket pilihan."
   },
   {
-    title: "Cocok untuk Berbagai Kebutuhan",
-    desc: "Mulai dari foto wisuda, keluarga, couple, pas foto, personal branding, corporate portrait, hingga dokumentasi bisnis dan company profile profesional."
+    title: "Berbagai Kebutuhan",
+    desc: "Cocok untuk personal, keluarga, bisnis, hingga company profile."
   },
   {
-    title: "Dipercaya Ratusan Klien",
-    desc: "Root Visual telah membantu ratusan pelanggan mengabadikan momen penting dengan pelayanan profesional dan hasil foto yang memuaskan."
+    title: "Dipercaya Banyak Klien",
+    desc: "Ratusan pelanggan telah mengabadikan momen terbaik bersama Root Visual."
   },
 ];
 
@@ -49,47 +49,76 @@ const titleVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: "easeOut" }
-  }
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  },
 };
 
 export default function WhyUs() {
   return (
-    <section className="bg-[#1e3a5f] py-16 px-4 md:px-8">
+    <section className="bg-[#1e3a5f] py-10 px-4 md:px-8">
       <div className="max-w-6xl mx-auto">
-        {/* Judul Section */}
+
+        {/* Heading */}
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
+          viewport={{ once: true }}
           variants={titleVariants}
-          className="text-center"
+          className="text-center mb-8"
         >
-          <h3 className="text-orange-400 text-sm font-semibold uppercase tracking-widest">
+          <h3 className="text-orange-400 text-xs font-semibold uppercase tracking-[0.2em]">
             Keunggulan Kami
           </h3>
-          <h2 className="text-4xl font-bold text-white mt-2">
+
+          <h2 className="text-3xl md:text-4xl font-bold text-white mt-2">
             Mengapa Root Visual?
           </h2>
         </motion.div>
 
-        {/* Grid Keunggulan */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
+        {/* Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+
           {features.map((feature, index) => (
+
             <div
               key={index}
-              className="flex items-start gap-4 bg-[#2a4468] p-5 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 border border-[#3b587f]"
+              className="
+                flex
+                items-start
+                gap-3
+                bg-[#2a4468]
+                border
+                border-[#3b587f]
+                rounded-xl
+                p-4
+                transition
+                hover:shadow-lg
+              "
             >
-              <div className="text-orange-400 flex-shrink-0">
-                <CheckCircle size={32} />
+
+              <div className="text-orange-400 mt-1 flex-shrink-0">
+                <CheckCircle size={22} />
               </div>
+
               <div>
-                <h3 className="text-lg font-semibold text-white">{feature.title}</h3>
-                <p className="text-gray-300">{feature.desc}</p>
+                <h3 className="text-base font-semibold text-white">
+                  {feature.title}
+                </h3>
+
+                <p className="text-sm text-gray-300 leading-6 mt-1">
+                  {feature.desc}
+                </p>
               </div>
+
             </div>
+
           ))}
+
         </div>
+
       </div>
     </section>
   );

@@ -3,88 +3,132 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FiPlus, FiMinus } from "react-icons/fi";
-import hiltiImage from "../assets/HILTI/cr1.png"; // Ganti dengan path gambar Hilti yang relevan
+import studioImage from "../assets/IMG_6194.jpg"; // Ganti dengan path gambar yang sesuai
 
-export default function FAQHilti() {
+export default function FAQRootVisual() {
   const [faqIndex, setFaqIndex] = useState<number | null>(null);
 
   const faqs = [
-  {
-    question: "Apakah harus booking sebelum datang?",
-    answer:
-      "Disarankan melakukan booking terlebih dahulu agar jadwal pemotretan sesuai dengan waktu yang Anda inginkan.",
-  },
-  {
-    question: "Apakah bisa foto keluarga dengan banyak anggota?",
-    answer:
-      "Bisa. Kami melayani foto keluarga kecil maupun keluarga besar dengan setting studio yang nyaman.",
-  },
-  {
-    question: "Berapa lama proses edit dan pengiriman foto?",
-    answer:
-      "Estimasi proses editing sekitar 3–7 hari kerja tergantung paket yang dipilih.",
-  },
-  {
-    question: "Apakah tersedia cetak foto dan frame?",
-    answer:
-      "Ya. Selain file digital, kami juga menyediakan layanan cetak foto premium dan berbagai pilihan frame.",
-  },
-];
+    {
+      question: "Apakah harus booking sebelum datang?",
+      answer:
+        "Ya. Kami menyarankan booking terlebih dahulu agar jadwal studio dan fotografer dapat disiapkan sesuai waktu yang Anda inginkan.",
+    },
+    {
+      question: "Apakah bisa foto keluarga dengan banyak anggota?",
+      answer:
+        "Tentu bisa. Studio kami dapat melayani sesi foto keluarga kecil maupun keluarga besar dengan pengaturan lighting dan pose yang nyaman.",
+    },
+    {
+      question: "Berapa lama hasil foto selesai?",
+      answer:
+        "Estimasi editing sekitar 3–7 hari kerja tergantung paket yang dipilih. Jika membutuhkan lebih cepat, silakan konsultasikan dengan tim kami.",
+    },
+    {
+      question: "Apakah mendapatkan file digital?",
+      answer:
+        "Ya. Semua paket mendapatkan file digital berkualitas tinggi. Beberapa paket juga tersedia pilihan cetak foto dan frame premium.",
+    },
+    {
+      question: "Apakah fotografer akan mengarahkan pose?",
+      answer:
+        "Tentu. Anda tidak perlu khawatir jika belum pernah foto studio. Fotografer kami akan membantu mengarahkan pose agar hasil terlihat natural dan percaya diri.",
+    },
+    {
+      question: "Apakah bisa untuk personal branding dan company profile?",
+      answer:
+        "Bisa. Root Visual melayani personal branding, corporate portrait, company profile, hingga kebutuhan konten profesional untuk bisnis.",
+    },
+  ];
 
   return (
-    <section className="bg-white text-gray-900 py-16 px-4 md:px-6">
-      <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-4xl font-bold mb-4">FAQ Aplikator Hilti</h2>
-        <p className="max-w-3xl mx-auto mb-10 text-lg text-gray-600">
-          Jawaban lengkap untuk para aplikator Hilti mengenai penggunaan peralatan, teknik kerja, dan tips aman di lapangan agar proyek konstruksi berjalan lancar dan maksimal.
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:items-stretch">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="w-full h-full rounded-2xl overflow-hidden shadow-lg md:order-last"
-          >
-            <img
-              src={hiltiImage}
-              alt="Contoh penggunaan alat Hilti oleh aplikator"
-              className="w-full h-[220px] md:h-[400px] object-cover"
-            />
-          </motion.div>
+    <section className="bg-white py-16 px-4 md:px-8">
+      <div className="max-w-6xl mx-auto">
 
-          <div className="flex flex-col justify-center space-y-6 text-left">
+        {/* Heading */}
+        <div className="text-center mb-10">
+          <h3 className="text-[#ba1322] uppercase tracking-[4px] text-sm font-semibold">
+            Frequently Asked Questions
+          </h3>
+
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mt-3">
+            Pertanyaan yang Sering Ditanyakan
+          </h2>
+
+          <p className="max-w-3xl mx-auto mt-4 text-gray-600 leading-7">
+            Masih bingung sebelum booking studio foto?
+            Berikut beberapa pertanyaan yang paling sering ditanyakan oleh
+            pelanggan Root Visual.
+          </p>
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-10 items-center">
+
+          {/* FAQ */}
+          <div className="space-y-4">
+
             {faqs.map((item, index) => (
               <div
                 key={index}
-                className="bg-gray-100 border border-gray-300 rounded-2xl overflow-hidden transition"
+                className="border border-gray-200 rounded-2xl overflow-hidden"
               >
                 <button
-                  onClick={() => setFaqIndex(index === faqIndex ? null : index)}
-                  className="w-full flex items-center justify-between p-5 text-lg font-semibold hover:bg-gray-200"
-                  aria-expanded={faqIndex === index}
-                  aria-controls={`faq-content-${index}`}
+                  onClick={() =>
+                    setFaqIndex(index === faqIndex ? null : index)
+                  }
+                  className="w-full flex justify-between items-center p-5 text-left font-semibold text-lg hover:bg-gray-50 transition"
                 >
-                  <span>{item.question}</span>
-                  {faqIndex === index ? <FiMinus /> : <FiPlus />}
+                  {item.question}
+
+                  {faqIndex === index ? (
+                    <FiMinus className="text-[#ba1322]" />
+                  ) : (
+                    <FiPlus className="text-[#ba1322]" />
+                  )}
                 </button>
+
                 <AnimatePresence>
                   {faqIndex === index && (
                     <motion.div
-                      id={`faq-content-${index}`}
                       initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: "auto" }}
-                      exit={{ opacity: 0, height: 0 }}
-                      className="p-5 text-gray-700 bg-gray-50 text-left"
+                      animate={{
+                        opacity: 1,
+                        height: "auto",
+                      }}
+                      exit={{
+                        opacity: 0,
+                        height: 0,
+                      }}
+                      transition={{ duration: 0.3 }}
                     >
-                      <p>{item.answer}</p>
+                      <div className="px-5 pb-5 text-gray-600 leading-7">
+                        {item.answer}
+                      </div>
                     </motion.div>
                   )}
                 </AnimatePresence>
               </div>
             ))}
+
           </div>
+
+          {/* Image */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.96 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: .6 }}
+            viewport={{ once: true }}
+            className="overflow-hidden rounded-3xl shadow-xl"
+          >
+            <img
+              src={studioImage}
+              alt="Studio Foto Root Visual"
+              className="w-full h-[520px] object-cover"
+            />
+          </motion.div>
+
         </div>
+
       </div>
     </section>
   );

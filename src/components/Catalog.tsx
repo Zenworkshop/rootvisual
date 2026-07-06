@@ -1,20 +1,20 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import proyek1 from "../assets/HILTI/ca1.png";
-import proyek2 from "../assets/HILTI/ca2.png";
-import proyek3 from "../assets/HILTI/ca3.png";
-import proyek4 from "../assets/HILTI/ca4.png";
-import proyek5 from "../assets/HILTI/ca5.png";
-import proyek6 from "../assets/HILTI/ca6.png";
-import proyek7 from "../assets/HILTI/ca7.png";
-import proyek8 from "../assets/HILTI/ca8.png";
-import proyek9 from "../assets/HILTI/ca9.png";
-import proyek10 from "../assets/HILTI/ca10.png";
-import proyek11 from "../assets/HILTI/ca11.png";
-import proyek12 from "../assets/HILTI/ca12.png";
-import proyek13 from "../assets/HILTI/ca13.png";
-import proyek14 from "../assets/HILTI/ca14.png";
-import proyek15 from "../assets/HILTI/ca15.png";
+import proyek1 from "../assets/IMG_0500-Edit-2.jpg";
+import proyek2 from "../assets/IMG_0502-Edit-4.jpg";
+import proyek3 from "../assets/IMG_0604.jpg";
+import proyek4 from "../assets/IMG_1230.jpg";
+import proyek5 from "../assets/IMG_2241.jpg";
+import proyek6 from "../assets/IMG_2266.jpg";
+import proyek7 from "../assets/IMG_2959-Edit.jpg";
+import proyek8 from "../assets/IMG_4111.jpg";
+import proyek9 from "../assets/IMG_4313-Edit.jpg";
+import proyek10 from "../assets/IMG_4382.jpg";
+import proyek11 from "../assets/IMG_4534-Edit-1.jpg";
+import proyek12 from "../assets/IMG_4602-Edit-2.jpg";
+import proyek13 from "../assets/IMG_4631.jpg";
+import proyek14 from "../assets/IMG_4826.jpg";
+import proyek15 from "../assets/IMG_4877-2.jpg";
 
 const images = [
   proyek1, proyek2, proyek3, proyek4, proyek5,
